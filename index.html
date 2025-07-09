@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PanInsight - Early Pancreatic Cancer Detection</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        .nav-link.active {
+            font-weight: 600;
+            color: #3b82f6; /* Blue for active link (blue-500) */
+            border-bottom: 2px solid #3b82f6;
+        }
+        .page-section {
+            display: none; /* Hidden by default */
+        }
+        .page-section.active {
+            display: block; /* Shown when active */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-10 lg:px-20">
+        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0"> <!-- Flex container for logo and text -->
+                <!-- Adjusted Placeholder logo for a grey logo -->
+                <img src="imagessss/PanInsight Logo.png" alt="PanInsight Logo" class="h-12 w-12 mr-3 rounded-full border-2 border-gray-300">
+                <div class="text-2xl font-bold text-blue-700">PanInsight</div> <!-- Changed back to blue-700 -->
+            </div>
+            <ul class="flex space-x-6 md:space-x-10">
+                <li><a href="#" id="nav-home" class="nav-link text-gray-600 hover:text-blue-500 transition duration-300 pb-1 active">Home</a></li> <!-- Changed back to blue-500 -->
+                <li><a href="#" id="nav-about" class="nav-link text-gray-600 hover:text-blue-500 transition duration-300 pb-1">About Us</a></li> <!-- Changed back to blue-500 -->
+                <li><a href="#" id="nav-team" class="nav-link text-gray-600 hover:text-blue-500 transition duration-300 pb-1">Team</a></li> <!-- Changed back to blue-500 -->
+                <li><a href="#" id="nav-contact" class="nav-link text-gray-600 hover:text-blue-500 transition duration-300 pb-1">Contact</a></li> <!-- Changed back to blue-500 -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-6 py-10 md:py-16 lg:py-20">
+
+        <!-- Home Page Section -->
+        <section id="home-page" class="page-section active bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">Welcome to PanInsight</h1> <!-- Changed text color to blue-700 -->
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                Revolutionizing early pancreatic cancer detection through advanced AI-powered image analysis.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-gray-600">
+                    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Our Mission</h2>
+                    <p class="mb-4">
+                        PanInsight is dedicated to fundamentally improving the early and accurate detection of pancreatic cancer. We leverage cutting-edge artificial intelligence to overcome the inherent challenges in identifying subtle lesions in complex anatomical structures, even in the presence of motion artifacts.
+                    </p>
+                    <p>
+                        Our goal is to empower radiologists with enhanced diagnostic capabilities, guide surgeons with precise localization, and enrich medical research with invaluable insights derived from comprehensive image analysis.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <!-- Image related to medical imaging or AI analysis -->
+                    <img src="imagessss/Pancrease.png" alt="Medical AI Scan - Pancreatic Cancer Detection" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Page Section -->
+        <section id="about-page" class="page-section bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">About PanInsight</h1> <!-- Changed text color to blue-700 -->
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                Understanding the challenges and our innovative solution for pancreatic cancer detection.
+            </p>
+
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-2xl font-semibold text-blue-700 mb-4">The Challenge: Detecting Pancreatic Cancer Early</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Pancreatic cancer is notoriously difficult to detect in its early stages due to several factors:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mt-2 ml-4 space-y-2">
+                        <li><strong class="text-gray-800">Anatomical Complexity:</strong> The pancreas is located deep within the abdomen, surrounded by vital organs, making it hard to visualize clearly.</li>
+                        <li><strong class="text-gray-800">Subtle Lesion Appearance:</strong> Early-stage tumors can be very small and blend in with surrounding healthy tissue, making them easily missed by the human eye.</li>
+                        <li><strong class="text-gray-800">Motion Artifacts:</strong> Respiratory and cardiac movements can cause blurring and distortion in imaging scans, further obscuring subtle details.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Our Solution: AI-Powered Image Analysis</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        PanInsight addresses these challenges head-on with its advanced AI-powered image analysis platform. Our system is designed to:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mt-2 ml-4 space-y-2">
+                        <li><strong class="text-gray-800">Enhance Visualization:</strong> Utilize sophisticated algorithms to improve image quality and highlight suspicious areas that might be overlooked.</li>
+                        <li><strong class="text-gray-800">Identify Subtle Lesions:</strong> Train on vast datasets of medical images to recognize even the most minute and ambiguous signs of cancer.</li>
+                        <li><strong class="text-gray-800">Compensate for Motion:</strong> Employ intelligent processing techniques to mitigate the effects of motion artifacts, providing clearer and more reliable images.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Impact and Benefits</h2>
+                    <ul class="list-disc list-inside text-gray-600 mt-2 ml-4 space-y-2">
+                        <li><strong class="text-gray-800">Empowering Radiologists:</strong> Provide radiologists with a powerful tool to augment their diagnostic accuracy and confidence, leading to earlier diagnoses.</li>
+                        <li><strong class="text-gray-800">Guiding Surgeons:</strong> Offer precise localization of tumors, aiding surgeons in planning and executing more effective interventions.</li>
+                        <li><strong class="text-gray-800">Enriching Medical Research:</strong> Generate valuable data and insights from image analysis, accelerating research into pancreatic cancer and the development of new treatments.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Page Section -->
+        <section id="team-page" class="page-section bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">Our Dedicated Team</h1> <!-- Changed text color to blue-700 -->
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 text-center max-w-3xl mx-auto">
+                Meet the brilliant minds behind PanInsight, committed to transforming pancreatic cancer detection.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <img src="imagessss/Debesh Jha.png" alt="Debesh Jha" class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-blue-200">
+                    <h3 class="text-xl font-semibold text-gray-800">Dr. Debesh Jha</h3>
+                    <p class="text-blue-600 mb-2">Technical Lead</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Ph.D. in Computer Science-
+Specializes in deep learning architectures for medical image analysis.
+                    </p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <img src="imagessss/Rahisha.png" alt="Rahisha" class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-blue-200">
+                    <h3 class="text-xl font-semibold text-gray-800">Rahisha Pokharel</h3>
+                    <p class="text-blue-600 mb-2">Entrepreneurial Lead</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                       Graduate Student at University Of South Dakota.
+                    </p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <img src="imagessss/Arun.png" alt="Arun" class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-blue-200">
+                    <h3 class="text-xl font-semibold text-gray-800">Prajwal Arun Kumar</h3>
+                    <p class="text-blue-600 mb-2">Entrepreneurial Lead</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                       Graduate Student at University Of South Dakota.
+                    </p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <img src="imagessss/Deepika.png" alt="Deepika" class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-blue-200">
+                    <h3 class="text-xl font-semibold text-gray-800">Deepika Nuthalapati</h3>
+                    <p class="text-blue-600 mb-2">Entrepreneurial Lead</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Graduate Student at University Of South Dakota.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page Section -->
+        <section id="contact-page" class="page-section bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6 text-center">Contact PanInsight</h1> <!-- Changed text color to blue-700 -->
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                We'd love to hear from you! Reach out with any inquiries, collaboration opportunities, or to report a problem.
+            </p>
+
+            <div class="max-w-xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email ID</label>
+                        <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="problem" class="block text-gray-700 text-sm font-bold mb-2">Your Problem/Message</label>
+                        <textarea id="problem" name="problem" rows="6" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Describe your problem or message here..."></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Send</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mt-10 text-center text-gray-600 space-y-2">
+                <p><strong>Email:</strong> paninsight@gmail.com <br> Send us your query anytime!</p>
+                <p><strong>Phone:</strong> +1 605 101 4567 <br> Mon to Fri 8am to 5pm</p>
+                <p><strong>Address:</strong> Vermillion, South Dakota.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-10">
+        <div class="container mx-auto text-center text-sm">
+            &copy; 2025 PanInsight. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
+
+            // Function to show a specific page and update active link
+            function showPage(pageId) {
+                // Hide all page sections
+                pageSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Deactivate all nav links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Show the target page
+                document.getElementById(pageId).classList.add('active');
+
+                // Activate the corresponding nav link
+                const activeNavLink = document.querySelector(`#nav-${pageId.replace('-page', '')}`);
+                if (activeNavLink) {
+                    activeNavLink.classList.add('active');
+                }
+            }
+
+            // Add click listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default link behavior
+                    const pageId = link.id.replace('nav-', '') + '-page';
+                    showPage(pageId);
+                });
+            });
+
+            // Initially show the home page (already active in HTML, but good for consistency)
+            showPage('home-page');
+        });
+    </script>
+</body>
+</html>
